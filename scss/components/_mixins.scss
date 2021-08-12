@@ -1,0 +1,189 @@
+@mixin boxModeling {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin gradientePortada {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  height: 600px;
+  flex-direction: column;
+  @include boxModeling;
+  background: linear-gradient(#057ef875, #0123402b);
+}
+
+@mixin portada {
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin tituloPortada {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 50px;
+  color: $color2;
+  text-shadow: $list1;
+}
+
+@mixin resaltado {
+  background: none;
+  text-decoration: none;
+  color: $color4;
+}
+
+@mixin grilla1 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+@mixin grilla2 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@mixin contenedorServicio {
+  width: 500px;
+  margin: 25px;
+}
+
+@mixin imgBody {
+  height: 300px;
+  width: 300px;
+  margin: 25px;
+}
+
+@mixin subtituloBody {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+@mixin parrafo {
+  text-align: justify;
+  padding: 20px;
+}
+
+.portadaHome_gradiente {
+  @include gradientePortada;
+}
+
+.portadaServicios_gradiente {
+  @include gradientePortada;
+}
+
+.portadaNosotros_gradiente {
+  @include gradientePortada;
+}
+
+.portadaHome {
+  background-image: url(../assets/scott-graham-5fNmWej4tAA-unsplash.jpg);
+  @include portada;
+}
+
+.portadaServicios {
+  background-image: url(../assets/servicios.jpg);
+  @include portada;
+}
+
+.portadaNosotros {
+  background-image: url(../assets/nosotros.jpg);
+  @include portada;
+  margin-bottom: 30px;
+}
+
+.portadaHome_titulo {
+  @include tituloPortada;
+}
+
+.portadaServicios_titulo {
+  @include tituloPortada;
+}
+
+mark {
+  @include resaltado;
+}
+
+.tituloBody_resaltado {
+  @include resaltado;
+}
+
+.contenedorMain {
+  @include grilla1;
+}
+
+.contenedorTabla {
+  @include grilla1;
+}
+
+.contenedorNosotros_cajaNosotros {
+  @include boxModeling;
+  font-size: 30px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: auto;
+  margin: 30px;
+}
+
+.contenedorNosotros_cajaNosotros--imagen {
+  grid-column: 4/6;
+  grid-row: 1/2;
+  @include boxModeling;
+  margin-top: 30px;
+}
+
+.cajaMain1_contenedorServicio {
+  @include contenedorServicio;
+}
+
+.cajaMain2_contenedorServicio {
+  @include contenedorServicio;
+}
+
+.cajaMain3_contenedorServicio {
+  @include contenedorServicio;
+}
+
+.cajaMain1_imgBody {
+  @include imgBody;
+}
+.cajaMain2_imgBody {
+  @include imgBody;
+}
+.cajaMain3_imgBody {
+  @include imgBody;
+}
+
+.cajaMain1_subtituloBody {
+  @include subtituloBody;
+}
+.cajaMain2_subtituloBody {
+  @include subtituloBody;
+}
+.cajaMain3_subtituloBody {
+  @include subtituloBody;
+}
+
+.cajaMain1_parrafo {
+  @include parrafo;
+}
+.cajaMain2_parrafo {
+  @include parrafo;
+}
+.cajaMain3_parrafo {
+  @include parrafo;
+}
+
+.footer_siguenos {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  color: $color2;
+  @include boxModeling;
+  flex-direction: column;
+}

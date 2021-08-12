@@ -1,0 +1,84 @@
+.contenedorNav {
+  background-color: $color1;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  .logo {
+    width: 200px;
+    height: 100px;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    grid-column: 4/8;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    li {
+      list-style: none;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $color2;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.portadaHome_botonCotizar {
+  color: $color2;
+  margin: 15px;
+  width: 300px;
+  font-size: 30px;
+  height: 60px;
+  border-radius: 5px;
+  border: none;
+  padding: 0px 30px;
+  font-family: "Roboto", sans-serif;
+  background-color: $color3;
+  transition: all 300ms;
+
+  &:hover {
+    background-color: $color4;
+    cursor: pointer;
+  }
+}
+
+.input {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  border-color: #cccccc;
+  background-color: #fafafa;
+  border-radius: 4px;
+  transition: all 1s;
+  &:focus {
+    width: 400px;
+    font-size: 25px;
+  }
+}
+
+.botonEnviar {
+  font-weight: 600;
+  background-color: #07db8a;
+  padding: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  box-shadow: -1px 0px 6px 1px #88888896;
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  transition: all $number1;
+  &:hover {
+    width: 125px;
+    height: 65px;
+  }
+}
