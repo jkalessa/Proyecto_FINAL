@@ -473,6 +473,14 @@ body {
     height: 150px;
     width: 150px;
     margin: 14px; }
+  .cajaMain2_imgBody {
+    height: 150px;
+    width: 150px;
+    margin: 14px; }
+  .cajaMain3_imgBody {
+    height: 150px;
+    width: 150px;
+    margin: 14px; }
   .formulario {
     grid-column: 1/5;
     grid-row: 2/4;
